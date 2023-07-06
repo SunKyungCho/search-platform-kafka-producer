@@ -1,0 +1,7 @@
+
+kafka:
+  platform:
+    auto-offset-reset-config: earliest
+    bootstrap-servers: b-2.develsearchplatfo.qoegdi.c2.kafka.ap-northeast-2.amazonaws.com:9094,b-1.develsearchplatfo.qoegdi.c2.kafka.ap-northeast-2.amazonaws.com:9094
+    security:
+      protocol: SSL
