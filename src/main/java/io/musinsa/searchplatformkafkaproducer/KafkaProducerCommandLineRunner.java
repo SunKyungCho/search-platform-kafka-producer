@@ -1,8 +1,9 @@
 package io.musinsa.searchplatformkafkaproducer;
 
-import java.util.UUID;
-
+import com.navercorp.fixturemonkey.FixtureMonkey;
+import com.navercorp.fixturemonkey.api.introspector.FieldReflectionArbitraryIntrospector;
 import io.musinsa.searchplatformkafkaproducer.application.DataProducer;
+import io.musinsa.searchplatformkafkaproducer.vo.GoodsVO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -18,9 +19,16 @@ public class KafkaProducerCommandLineRunner implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
 
-        String key = UUID.randomUUID().toString();
-        dataProducer.sendMessage(TOPIC, key, "value");
+        FixtureMonkey fixtureMonkey = FixtureMonkey.builder()
+                .objectIntrospector(FieldReflectionArbitraryIntrospector.INSTANCE)
+                .defaultNotNull(true)
+                .build();
 
-        System.out.println("Hello World from KafkaProducerCommandLineRunner");
+
+        System.out.println();
+
+
+//        String key = UUID.randomUUID().toString();
+//        dataProducer.sendMessage(TOPIC, key, "value");
     }
 }
