@@ -94,8 +94,6 @@ public class GoodsVO {
     private NewProduct newProduct;
 
 
-    private Map<String, Object> custom = new HashMap<>();
-
     @Getter
     @Setter
     @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
@@ -154,7 +152,6 @@ public class GoodsVO {
         @JsonPropertyDescription("상품 홍보글 예:[박서준 착용]")
         private String headDesc; //신규 생성
 
-        private Map<String, Object> custom = new HashMap<>();
     }
 
 
@@ -178,7 +175,6 @@ public class GoodsVO {
         @JsonPropertyDescription("상품가격 - 할인율")
         private Float discountRate;
 
-        private Map<String, Object> custom  = new HashMap<>();
     }
 
     @Getter
@@ -192,16 +188,12 @@ public class GoodsVO {
         private String name;
         @JsonPropertyDescription("코드명@#색상명")
         private String concatenationName;
-        @JsonPropertyDescription("코드명@#색상명")
-        private Map<String, Object> custom = new HashMap<>();
 
     }
 
     @Getter
     @Setter
     @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
-    @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY, getterVisibility = JsonAutoDetect.Visibility.NONE)
-    @JsonIgnoreProperties(ignoreUnknown = true)
     @NoArgsConstructor
     public static class Category {
         private String code;
@@ -225,8 +217,6 @@ public class GoodsVO {
         @JsonPropertyDescription("성별")
         private Gender gender;
 
-        @JsonPropertyDescription("커스텀")
-        private Map<String, Object> custom = new HashMap<>();
 
         @Getter
         @Setter
@@ -240,8 +230,6 @@ public class GoodsVO {
             private String local;
             @JsonPropertyDescription("카테고리 영문명")
             private String english;
-
-            private Map<String, Object> custom = new HashMap<>();
 
         }
 
@@ -317,7 +305,6 @@ public class GoodsVO {
             @JsonPropertyDescription("카테고리 시퀀스")
             private Float sequence;
 
-            private Map<String, Object> custom = new HashMap<>();
 
         }
     }
@@ -336,7 +323,6 @@ public class GoodsVO {
         private Tag tag;
         private Rank rank;
         private Condition condition;
-        private Map<String, Object> custom = new HashMap<>();
 
 
         @Getter
@@ -392,7 +378,6 @@ public class GoodsVO {
             @JsonPropertyDescription("멀티 성별 여부 Yn - 2개 이상의 성별을 가지고 있는지 확인")
             private String multiGenderYn;
 
-            private Map<String, Object> custom = new HashMap<>();
 
         }
 
@@ -410,9 +395,6 @@ public class GoodsVO {
             @JsonPropertyDescription("브랜드 랭킹 점수")
             private Points points;
 
-
-            @JsonPropertyDescription("브랜드 커스텀 랭킹 점수")
-            public Map<String, Object> custom = new HashMap<>();
 
             @Getter
             @Setter
@@ -473,7 +455,6 @@ public class GoodsVO {
         private String raffleYn;
         private String multiGenderYn;
         private String setupYn;
-        private Map<String, Object> custom = new HashMap<>();
     }
 
     @Getter
@@ -536,7 +517,6 @@ public class GoodsVO {
 
         private Name name;
 
-        private Map<String, Object> custom = new HashMap<>();
 
         @Getter
         @Setter
@@ -615,8 +595,6 @@ public class GoodsVO {
         @JsonPropertyDescription("시스템 태그")
         private List<String> system;
 
-        @JsonPropertyDescription("커스텀 태그")
-        private Map<String, Object> custom = new HashMap<>();
     }
 
     @Getter
@@ -652,7 +630,6 @@ public class GoodsVO {
 
         private Count count;
 
-        private Map<String, Object> custom = new HashMap<>();
 
         @Getter
         @Setter
