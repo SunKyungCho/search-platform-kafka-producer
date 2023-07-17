@@ -118,7 +118,7 @@ public class GoodsVO {
         private String name;
 
         @JsonPropertyDescription("쿠폰 - 할인율")
-        private Float discountRate;
+        private Integer discountRate;
         @JsonPropertyDescription("쿠폰 - 적용가")
         private Long discount;
         @JsonPropertyDescription("쿠폰 시작일")
@@ -173,7 +173,7 @@ public class GoodsVO {
         @JsonPropertyDescription("상품가격 - 할인가")
         private Long discount;
         @JsonPropertyDescription("상품가격 - 할인율")
-        private Float discountRate;
+        private Integer discountRate;
 
     }
 
@@ -241,7 +241,7 @@ public class GoodsVO {
         public static class Rank {
 
             @JsonPropertyDescription("카테고리 시퀀스")
-            private Float sequence;
+            private Integer sequence;
 
             @JsonPropertyDescription("카테고리 태그- [\"셔츠\", \"남방\"]")
             private List<String> tag;
@@ -303,7 +303,7 @@ public class GoodsVO {
             private String entireName;
 
             @JsonPropertyDescription("카테고리 시퀀스")
-            private Float sequence;
+            private Integer sequence;
 
 
         }
@@ -404,25 +404,25 @@ public class GoodsVO {
             public static class Points {
 
                 @JsonPropertyDescription("브랜드 랭킹 점수")
-                private Float all;
+                private Integer all;
 
                 @JsonPropertyDescription("랭킹포인트 - 연령1 점수")
-                private Float seg1;
+                private Integer seg1;
 
                 @JsonPropertyDescription("랭킹포인트 - 연령2 점수")
-                private Float seg2;
+                private Integer seg2;
 
                 @JsonPropertyDescription("랭킹포인트 - 연령3 점수")
-                private Float seg3;
+                private Integer seg3;
 
                 @JsonPropertyDescription("랭킹포인트 - 연령4 점수")
-                private Float seg4;
+                private Integer seg4;
 
                 @JsonPropertyDescription("랭킹포인트 - 연령5 점수")
-                private Float seg5;
+                private Integer seg5;
 
                 @JsonPropertyDescription("랭킹포인트 - 연령6 점수")
-                private Float seg6;
+                private Integer seg6;
             }
         }
 
@@ -438,7 +438,7 @@ public class GoodsVO {
         @JsonPropertyDescription("리뷰 - 갯수")
         private Integer count;
         @JsonPropertyDescription("리뷰 - 별점")
-        private Float grade;
+        private Integer grade;
     }
 
     @Getter
@@ -480,28 +480,28 @@ public class GoodsVO {
         public static class Points {
 
             @JsonPropertyDescription("랭킹포인트 - 전체 점수")
-            private Float all;
+            private Integer all;
 
             @JsonPropertyDescription("랭킹포인트 - 연령0 점수")
-            private Float seg0;
+            private Integer seg0;
 
             @JsonPropertyDescription("랭킹포인트 - 연령1 점수")
-            private Float seg1;
+            private Integer seg1;
 
             @JsonPropertyDescription("랭킹포인트 - 연령2 점수")
-            private Float seg2;
+            private Integer seg2;
 
             @JsonPropertyDescription("랭킹포인트 - 연령3 점수")
-            private Float seg3;
+            private Integer seg3;
 
             @JsonPropertyDescription("랭킹포인트 - 연령4 점수")
-            private Float seg4;
+            private Integer seg4;
 
             @JsonPropertyDescription("랭킹포인트 - 연령5 점수")
-            private Float seg5;
+            private Integer seg5;
 
             @JsonPropertyDescription("랭킹포인트 - 연령6 점수")
-            private Float seg6;
+            private Integer seg6;
         }
     }
 
@@ -527,9 +527,9 @@ public class GoodsVO {
             @JsonPropertyDescription("랭킹 - 가중치 - 사용자 클릭 - 키워드(매핑)")
             private String keyword;
             @JsonPropertyDescription("랭킹 - 가중치 - 사용자 클릭 - 카테고리 스코어")
-            private Double categoryScore;
+            private Integer categoryScore;
             @JsonPropertyDescription("랭킹 - 가중치 - 사용자 클릭 - 상품 스코어")
-            private Double goodsScore;
+            private Integer goodsScore;
         }
 
         @Getter
